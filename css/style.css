@@ -1,0 +1,2062 @@
+@font-face {
+  font-family: 'TitilliumWeb-Regular';  
+  src: url("..assets/fonts/TitilliumWeb-Regular.ttf") format("truetype");      
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Malaga';  
+  src: url("..assets/fonts/hinted-MalagaOT-RegItalic.ttf") format("truetype");      
+  font-weight: normal;
+  font-style: italic;
+}
+
+
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+body {
+  background-color: white;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 400;
+  color: #7a7a7a;  
+}
+
+.wrapper {  
+  width: 1800px;
+  height: 3140px; 
+  background-color: white; 
+  background-image: url("../assets/images/mainImage.png");
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-areas:
+  "header"
+  "main"
+  "footer";
+  grid-template-rows: 220px 2605px 1fr;
+}
+
+nav.wrapperSocialMedia {  
+  right: 31px;
+  top: 175px;
+  position: fixed;
+  height: 120px;
+  z-index: 300;
+}
+
+.wrapperSocialMedia ul {    
+  display: grid;
+  grid-template-rows: repeat(3, 1fr); 
+  
+}
+
+.wrapperSocialMedia ul li {
+  display: grid;
+  margin-top: 16px;   
+}
+
+.wrapperSocialMedia ul li a p i:hover {
+  color: black;
+}
+
+.wrapperSocialMedia ul li a {
+  display: grid;
+  text-decoration: none;
+}
+
+.wrapperSocialMedia ul li a p {    
+  display: grid;
+  color: #7a7a7a;
+  font-size: 22px;    
+}
+
+/* HEADER */
+
+.header {
+  position: relative;
+  margin: 0;
+  box-sizing: border-box;
+  grid-area: header;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  padding-right: 200px;
+  padding-left: 200px;
+  display: grid;
+  grid-template-areas:
+  "headerHeadline"
+  "headerLogoAndNavigation"
+  "headerLanguage";
+  grid-template-rows: 0px 120px 100px;
+}
+
+.headerHeadline {
+  grid-area: headerHeadline;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  position: absolute;
+}
+
+.headerLogoAndNavigation {
+  grid-area: headerLogoAndNavigation;
+  width: 100%;
+  height: 120px;  
+  display: grid;
+  grid-template-areas: "headerLogo headerNavigation headerEnterandRegistration";
+  grid-template-columns: 250px 950px 200px;
+}
+
+.headerLogo {
+  grid-area: headerLogo;
+  margin: 85px 0 0 0;  
+}
+
+.headerNavigation {
+  grid-area: headerNavigation;  
+  margin: 0;   
+  padding: 89px 53px 0 453px;
+}
+
+.headerNavigationList {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.headerNavigationItem {
+  display: grid;
+  padding-left: 25px;
+}
+
+.headerNavigationItem a {
+  text-decoration: none;
+  color: #7a7a7a;
+}
+
+.headerNavigationItem a:hover {
+  color: black;
+  font-weight: 600;
+}
+
+.headerEnterandRegistration {
+  grid-area: headerEnterandRegistration;
+  margin: 0;
+  padding-top: 89px;  
+}
+
+.headerEnterandRegistrationList768 {
+  display: none;
+}
+
+.headerEnterandRegistration div {
+  margin-left: 18px;
+  margin-top: 2px;
+}
+
+i[class="fas fa-sign-in-alt"] {
+  position: absolute;
+  color: #582c7e;
+  top: 88px;  
+}
+
+.headerEnterandRegistrationList {
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);  
+  width: 200px;
+  top: 87px;
+}
+
+.headerEnterandRegistrationItem {
+  display: grid;      
+}
+
+.headerEnterandRegistrationItem p:hover {
+  font-weight: 800;
+  color: black      
+}
+
+.headerEnterandRegistrationItem a {
+  text-decoration: none;
+  color: #7a7a7a;
+  font-weight: bold;  
+}
+
+.headerEnterandRegistrationItem:first-child {
+  margin-left: 40px;
+}
+
+.headerEnterandRegistrationItem:last-child a {
+  position: absolute;  
+  color: white;
+  right: 17px;
+}
+
+.headerEnterandRegistrationItem img {
+  position: absolute;  
+  margin-left: 89px;
+  top: -20;  
+}
+
+.headerLanguage {
+  grid-area: headerLanguage;
+  width: 100%;
+  height: 100px;  
+}
+
+.headerLanguageList {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding-right: 1150px;
+  font-size: 14px;
+  margin-top: 13px;
+}
+
+.headerLanguageList li:first-child {
+  margin-left: 0;
+}
+
+.headerLanguageItem {
+  display: grid;
+  position: relative;  
+}
+
+.headerLanguageItem a {
+  text-decoration: none;
+  color: #7a7a7a;  
+}
+
+.headerLanguageItem a:hover {  
+  font-weight: 800;
+  border-bottom: 1px solid #7a7a7a;  
+}
+
+.headerLanguageList li:not(:last-child) a:after {    
+  content: '/';
+  position: absolute;
+  left: 50px;
+}
+
+.headerLanguageList li:first-child a:after {    
+  content: '/';
+  position: absolute;
+  left: 55px;
+}
+
+/* MAIM */
+
+.main {
+  grid-area: main;  
+  width: 1800px;
+  height: 2320px;
+  display: grid;  
+  grid-template-areas:
+  "mainSectionRegistration" 
+  "mainSectionOurSesvices" 
+  "mainSectionAboutUs"
+  "mainSectionDonate";
+  grid-template-rows: 570px 590px 845px 600px;  
+}
+
+/* mainSectionRegistration */
+
+  .mainSectionRegistration {
+    grid-area: mainSectionRegistration;
+    width: 1800px;
+    height: 570px;
+    display: grid;    
+    font-weight: 600;
+    margin: 0;      
+  }
+
+  .mainRegistrationBigSigns {
+    display: grid;
+    width: 1800px;
+    height: 570px;
+    grid-template-rows: 2fr 1fr 8fr;
+  }
+
+  .mainRegistrationHeadline {    
+    font-size: 60px;    
+    margin-top: 92px;    
+  } 
+
+  .mainRegistrationHeadlineDescription {     
+    font-size: 36px;
+    padding-top: 8px;   
+  }
+
+  .mainRegistrationHeadlineDescription span {
+    color:#fc444a;
+  }
+
+  .mainRegistrationLinks {
+    display: grid;
+    grid-template-columns: 280px 80px 80px;
+    padding-top: 62px;    
+  }
+
+  .mainRegistrationLinks a:nth-child(1) {
+    padding-left: 8px;
+  }
+
+  .mainRegistrationLinks a:nth-child(2) img {
+    padding-top: 15px;
+  }
+  
+  .mainRegistrationLinks a:nth-child(3) img {
+    padding-top: 15px;
+    padding-right: 28px;
+  }
+
+  .createAccount420 {
+    display: none;
+  }
+
+  .mainRegistrationLinks a  {    
+    text-decoration: none;    
+  }
+
+  .mainRegistrationLinks a p  {
+    color: white;    
+    margin-top: -70px;
+  }
+
+  .mainRegistrationLinks a p:hover  {
+    color: #7a7a7a;    
+  }
+
+  .mainRegistrationLinks a:nth-child(1) p {
+    margin-left: 90px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .mainRegistrationLinks a:nth-child(2) p i {
+    margin-top: 35px;    
+    margin-left: 15px;
+    font-size: 22px;
+  }
+
+  .mainRegistrationLinks a:nth-child(3) p i{
+    margin-top: 37px;    
+    margin-left: 16px;
+    font-size: 20px;
+  } 
+
+/* mainSectionOurSesvices */
+
+  .mainSectionOurSesvices {
+    grid-area: mainSectionOurSesvices; 
+    width: 1320px;   
+    height: 590px;  
+    display: grid;
+    grid-template-areas:
+    "first second third"
+    "fourth fourth third";
+    grid-template-columns: 390px 430px 450px;
+    grid-template-rows: 410px 180px; 
+    padding: 0 160px 0 320px;    
+    margin: 0;
+    position: relative; 
+  }
+  
+  .mainSectionOurSesvicesFirst,
+  .mainSectionOurSesvicesSecond,
+  .mainSectionOurSesvicesThird {
+    display: grid;
+    grid-template-areas:
+    "img head"
+    "desc desc";
+    grid-template-rows: 85px 1fr ;
+    grid-template-columns: 60px 1fr;    
+    margin-top: 130px;    
+  }
+
+  .mainSectionOurSesvices h4 {
+    margin-top: -6px;  
+    margin-left: 5px;  
+  }
+
+  .mainSectionOurSesvices p {      
+    margin-left: 5px;  
+  }
+
+  .mainSectionOurSesvices article div:last-child {
+    margin-left: 5px;
+    margin-top: -6px;
+    line-height: 1.3em;
+  }
+
+  .mainSectionOurSesvicesFirst {
+    grid-area: first;    
+    width: 360px;
+    margin-right: 35px;
+    margin-left: 0;       
+  }
+
+  .mainSectionOurSesvicesFirst:after {
+    content: '';
+    width: 0;
+    height: 205px;    
+    border: 0.5px solid #7a7a7a;    
+    margin-left: 394px;
+    margin-top: -412px;   
+  }
+
+  .mainSectionOurSesvicesSecond {
+    grid-area: second;  
+    width: 340px;
+    margin-left: 45px;
+    margin-right: 45px;
+  }
+
+  .mainSectionOurSesvicesSecond:after {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 433px;    
+    border: 0.5px solid #7a7a7a;    
+    left: 1145px;
+    top: 129px;
+    
+  }
+
+  .mainSectionOurSesvicesThird {
+    grid-area: third;
+    width: 365px;
+    margin-left: 50px;
+  }
+
+  .mainSectionOurSesvicesThird:after {
+    content: '';
+    width: 193;
+    height: 0px;    
+    border: 0.5px solid #7a7a7a;    
+    margin-left: 416px;
+    margin-top: -463px;   
+  }
+
+  .mainSectionOurSesvicesThird {
+    grid-area: third;       
+    width: 365px;
+  }
+  
+  .mainSectionOurSesvices article div:nth-child(1) {
+    grid-area: img;
+  }
+  .mainSectionOurSesvices article div:nth-child(2) {
+    grid-area: head;
+  }
+  .mainSectionOurSesvices article div:nth-child(3) {
+    grid-area: desc;
+  }
+
+  .mainSectionOurSesvices article div {
+    margin-left: 0;
+  }
+
+  .mainSectionOurSesvices article:nth-child(-n+3) h4 {
+    font-size: 30px; 
+    font-weight: 400;    
+  }
+
+  .mainSectionOurSesvices  article:nth-child(-n+3) p {
+    font-size: 14px;    
+  }
+
+  .mainSectionOurSesvices  article:nth-child(-n+3) h4+p {
+    font-size: 18px;
+    font-weight: 400;   
+  }
+ 
+  .mainSectionOurSesvicesFourth {
+    grid-area: fourth;       
+    display: grid;
+    grid-template-rows: 75px 1fr;
+    text-align: end;
+    padding-right: 33px;
+    letter-spacing: 1.03px;     
+  }   
+
+  .mainSectionOurSesvicesFourth h3 {        
+    font-size: 60px;
+    font-weight: 400;    
+    margin: 0;
+  }
+
+  .mainSectionOurSesvicesFourth p {       
+    font-size: 24px;    
+  } 
+
+  .mainSectionOurSesvicesFourth span {
+    color: #fc444a;
+  }
+
+  .mainSectionOurSesvicesDecoretion {
+    position: absolute;    
+    height: 60px;
+    top: 562px;
+    left: 969px;
+    width: 335px;
+    padding-top: 18px;
+    padding-left: 29px;
+    border: 1px solid #7a7a7a;
+    border-radius: 100px;
+    box-sizing: border-box;
+    z-index: 100;    
+    text-decoration: none;
+    color: #7a7a7a;    
+  }
+
+  .mainSectionOurSesvicesDecoretion:before {
+    position: absolute;
+    content: '';
+    width: 974px;
+    height: 0px;    
+    border: 0.5px solid #7a7a7a;    
+    left: -975px;
+    top: 28px;   
+  }
+  
+/* mainSectionAboutUs */
+
+  .mainSectionAboutUs {
+    grid-area: mainSectionAboutUs;
+    display: grid;    
+    height: 845px;
+    background-image: url("../assets/images/mainSectionAboutUs2.png");
+    width: 1800px;
+    grid-template-areas:
+    "news"
+    "slider"
+    "apply";
+    grid-template-rows: 195px 265px 1fr;
+    position: relative;    
+  }
+
+  .mainSectionAboutUsNewspapers {
+    grid-area: news;
+    display: grid;    
+    padding-top: 71px;
+    padding-left: 22px;
+    width: 1800px;
+    box-sizing: border-box;    
+  }
+
+  .mainSectionAboutUsNewspapers ul {
+    display: grid;
+    grid-template-columns: 160px 150px 170px 155px 195px 120px;
+    margin-right: 850px;    
+  }
+
+  .mainSectionAboutUsNewspapers li {
+    display: grid;    
+  }
+
+  .mainSectionAboutUsNewspapersSlider {
+    grid-area: slider;
+    display: grid;
+    padding-left: 360px;
+    padding-right: 875px;    
+    grid-template-areas:
+    "circle info"
+    "circle signature";
+    grid-template-columns: 35px 500px;
+    grid-template-rows: 130px 15px;
+    margin: 0; 
+    font-family: 'Malaga';
+    line-height: 1.9rem;
+    font-style: italic; 
+  }
+
+  .mainSectionAboutUsNewspapersSlider ul {
+    grid-area: circle;
+  }
+
+  article.mainSectionAboutUsNewspapersSlider:nth-child(2) {
+    font-size: 24px;    
+    margin: 0;   
+    width: 500px;
+  }
+
+  .mainSectionAboutUsNewspapersSlider p {
+    margin-left: 7px;
+    font-size: 25px;
+  }
+  
+  .mainSectionAboutUsNewspapersSlider p:last-child {
+    grid-area: signature;
+    margin: 0;
+    font-size: 16px;
+    padding-left: 9px;
+  }
+
+  .mainSectionAboutUsNewspapersSlider ul {
+    display: grid;
+    height: 65px;
+    margin-top: 7px;
+    margin-left: 5px;
+  }
+
+  .mainSectionAboutUsNewspapersSlider ul li {
+    display: grid;
+  }
+
+  .mainSectionAboutUsNewspapersSlider ul li a i {
+    font-size: 14px;
+    color: #7a7a7a;
+  }
+
+  .mainSectionAboutUsNewspapersSlider ul li a i:hover {    
+    color: black;
+  }  
+
+  .mainSectionAboutUsAplications p {
+    grid-area: apply;
+    margin: 0;    
+    display: grid;
+    grid-template-rows: 60px 33px 1fr;
+    text-align: end;
+    margin-top: 16px;
+    padding-left: 672px;
+    padding-right: 700px;
+    line-height: 1.3rem
+  }
+
+  .mainSectionAboutUsAplications h4 {    
+    font-size: 36px;
+    font-weight: 400;    
+    margin: 0 697 0 0;
+    text-align: end;   
+  }
+
+  .mainSectionAboutUsAplications ul {
+    display: grid;    
+    margin: 0 0 0 47px;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: right;
+    margin-left: 724px;
+    width: 383px;
+  }
+
+  .mainSectionAboutUsAplications ul li {
+    display: grid;
+    margin: 0;
+  }
+
+  .mainSectionAboutUsAplications:before {
+    position: absolute;
+    content: '';
+    width: 450px;
+    height: 0px;    
+    border: 0.5px solid #7a7a7a;    
+    left: 1342px;
+    bottom: 13px;
+  }
+  
+  .mainSectionAboutUsAplications:after {
+    position: absolute;
+    content: '';
+    width: 900px;
+    height: 0px;    
+    border: 0.5px solid #7a7a7a;    
+    left: 400px;
+    top: 831px;         
+  }
+/* mainSectionDonate */
+
+  .mainSectionDonate {
+    position: relative;
+    grid-area: mainSectionDonate;
+    height: 600px;
+    width: 1800px;    
+    display: grid;
+    grid-template-rows: 100px 65px 170px 35px 1fr;
+  }
+
+  .mainSectionDonate h4 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-top: 58px;
+  }
+
+  .mainSectionDonate p {
+    font-size: 29px;
+  }
+
+  .mainSectionDonate  ul {
+    display: grid;
+    grid-template-columns: 300px 220px;
+  }
+
+  .mainSectionDonate  ul  li{
+    display: grid;
+    text-decoration: none;
+  }
+
+  .mainSectionDonate  ul  a{
+    text-decoration: none;
+  }
+
+  .mainSectionDonate  ul p {
+    font-size: 18px;
+    font-weight: 800;
+    z-index: 10;
+    margin-top: -70px;
+    margin-left: 43px;
+    color: white;
+  }
+
+  .mainSectionDonate  ul li:last-child p {
+    margin-top: -73px;
+    margin-left: 63px;
+  }
+
+  .mainSectionDonate  ul li:first-child {
+    display: grid;
+    padding-left: 8px;
+  }
+
+  .mainSectionDonate ul+p {
+    font-size: 14px;
+    padding-left: 1137px;
+    margin-left: 0;
+  }
+
+  .mainSectionDonateUpgrade p:hover {
+    color: #7a7a7a;
+  }
+
+  .mainSectionDonate ul+p:before {
+    position: absolute;
+    content: '';
+    width: 1399px;
+    height: 0px;    
+    border: 0.5px solid #7a7a7a;    
+    left: 0px;
+    top: 313px;   
+  }
+
+  .mainSectionDonate ul+p:after {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 440px;    
+    border: 0.5px solid #7a7a7a;    
+    left: 1400px;
+    top: 313px;
+  }
+
+  ul.mainSectionDonateFriends {
+    display: grid;
+    width: 950px;
+    margin-top: -20px;
+    grid-template-columns: 140px 115px 145px 175px 100px 175px 100px;    
+    margin-left: 454px; 
+  }
+
+  ul.mainSectionDonateFriends li{
+    display: grid;    
+    text-decoration: none;
+  }
+
+  ul.mainSectionDonateFriends li:nth-child(2){
+    padding-left: 28px;
+  }
+
+  ul.mainSectionDonateFriends li:nth-child(3){
+    margin-left: 40px;
+  }
+
+/* Footer */
+
+.footer {
+  grid-area: footer;  
+  width: 1800px; 
+  display: grid;
+  grid-template-areas:
+  "email navigation"
+  "media navigation";
+  grid-template-columns: 620px 1fr;
+  grid-template-rows: 235px 1fr;  
+}
+
+.footerEmail {
+  grid-area: email;
+  font-size: 14px;
+  width: 231px;
+  height: 133px;
+  display: grid;  
+  font-size: 14px;
+  border-left: 1px solid #7a7a7a;
+  margin-bottom: 108px;
+  margin-left: 198px;  
+  padding-left: 21px;
+}
+
+.footerEmail ul {
+  display: grid;
+  grid-auto-rows: 25px 25px 40px 75px;
+}
+
+.footerEmail ul li {
+  display: grid;
+  margin-left: 0;  
+}
+
+.footerEmail ul li a {
+  text-decoration: none;
+  color: #7a7a7a;
+}
+
+.footerEmail ul li a p span {
+  font-weight: 800;
+}
+
+.footerEmail ul li:last-child a p:last-child {
+  font-weight: 800;
+  margin-top: 10px;
+}
+
+.footerEmail p:hover {
+  color: black;
+}
+
+.footerEmail ul li:last-child a:hover {
+  color: black;
+}
+
+.footerNavigation {
+  grid-area: navigation;
+  display: grid;
+  width: 525px;
+  grid-template-columns: 100px 225px 200px;
+  margin-right: 446px; 
+}
+
+.footerNavigation ul {  
+  margin: 0;
+  display: grid;
+  grid-template-rows: repeat(5, 23px); 
+}
+
+.footerNavigation ul h5 {
+  margin-right: -20px;
+  font-size: 18px; 
+}
+
+.footerNavigation ul li {
+  direction: rtl;
+  margin-right: 0; 
+  font-size: 14px;
+  padding-top: 27px;  
+}
+
+.footerNavigation ul li p:hover {
+  color:black;
+}
+
+.footerNavigation ul li a {
+  text-decoration: none;
+  color: #7a7a7a;
+  font-weight: 600;
+}
+
+.footerNavigation ul:first-child {
+  margin-right: 29px;
+}
+
+.footerNavigation ul:nth-child(2) {
+  border-left: 1px solid #7a7a7a;
+  margin-left: 16px;
+}
+
+.footerSocialMedia ul li p:hover {
+  color:black;
+  font-weight: 800;
+}
+
+.footerSocialMedia {
+  grid-area: media;
+  width: 365px;
+  display: grid;
+  grid-template-rows: 30px 1fr;
+  font-size: 12px;
+  margin-left: 182px;
+  position: relative;
+}
+
+.footerSocialMedia ul {
+  display: grid;
+  grid-template-columns: 63px 67px 70px 110px 1fr;
+}
+
+.footerSocialMedia ul li {
+  position: relative;
+  display: grid;  
+}
+
+.footerSocialMedia ul li a {
+  text-decoration: none;
+  color: #7a7a7a;  
+}
+
+.footerSocialMedia li:first-child a:after {    
+  content: '/';
+  position: absolute;
+  left: 75px;
+  top: 0;
+}
+
+.footerSocialMedia li:nth-child(2) a:after {    
+  content: '/';
+  position: absolute;
+  left: 65px;
+  top: 0;
+}
+
+.footerSocialMedia li:nth-child(3) a:after {    
+  content: '/';
+  position: absolute;
+  left: 70px;
+  top: 0;
+}
+
+.footerSocialMedia li:nth-child(4) a:after {    
+  content: '/';
+  position: absolute;
+  left: 115px;
+  top: 0;
+}
+
+.footerSocialMedia ul li:last-child {
+  padding-left: 12px; 
+}
+
+.footerSocialMedia p:last-child {
+  margin-left: 17px;
+}
+
+/* 1400px */
+@media (max-width: 1400px) {
+  .wrapper {  
+    width: 1400px;    
+  }
+
+  nav.wrapperSocialMedia {  
+    right: 31px;
+    top: 175px;
+    position: fixed;
+    height: 120px;
+    z-index: 300;   
+  }
+
+  .header {
+    width: 100%;
+    padding: 0;
+    margin: 0    
+  }
+
+  .headerEnterandRegistration {
+    width: 199px;
+  }
+
+  .headerEnterandRegistrationList {
+    left: 1182px;    
+  }
+
+  .headerEnterandRegistrationList li:first-child {
+    margin-left: 55px;
+  }
+
+  .main {
+    width: 100%;     
+  }
+
+  .mainSectionRegistration {
+    width: 100%;  
+     
+  }
+
+  .mainRegistrationBigSigns {         
+    width: 100%;    
+  }
+
+  .mainSectionOurSesvices {    
+    width: 100%; 
+    padding: 0 0 0 144px;    
+    width: 1217px;    
+  }
+
+  .mainSectionOurSesvicesDecoretion {
+    top: 455px;
+    text-decoration: none;
+    color: #7a7a7a;
+  }
+
+  .mainSectionAboutUs {   
+    background-image: url("../assets/images/computer1400.png");
+    width: 100%; 
+    margin: 0;
+    padding: 0;    
+  }
+
+  .mainSectionAboutUsNewspapers {    
+    width: 100%; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;        
+  }
+
+  .mainSectionAboutUsNewspapers ul {
+    display: grid;
+    grid-template-columns: 160px 150px 170px 155px 195px 120px;
+    margin: 0;
+  }
+
+  .mainSectionAboutUsNewspapersSlider {    
+    padding-right: 540px;
+    margin: 0;   
+  }
+
+  .mainSectionAboutUsAplications p {    
+    padding-right: 503px;
+    margin: 0;   
+    grid-template-rows: 1fr;
+    padding-left: 458px;
+    width: 440px; 
+    line-height: 1.4rem;
+    box-sizing: content-box;   
+  }
+
+  .mainSectionAboutUsAplications h4 {      
+    margin: 0 503 20 0;      
+  }
+
+  .mainSectionAboutUsAplications ul {
+    display: grid;    
+    margin: 0 0 0 47px;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: right;
+    margin-left: 520px;
+    margin-top: 20px;
+    width: 383px;
+  }
+
+  .mainSectionAboutUsAplications ul li {    
+    margin: 0;
+  }
+
+  .mainSectionDonate {
+    width: 100%;        
+  }
+
+  ul.mainSectionDonateFriends {    
+    margin-left: 230px;
+  }
+
+  .mainSectionDonate ul+p {
+    padding-left: 923px;
+  }
+
+  .footer {    
+    width: 100%;       
+  }
+
+  .footerEmail {    
+    border-left: none;    
+    margin-left: 0px;    
+  }
+
+  .footerNavigation {    
+    margin-right: 255px; 
+  }
+
+  .footerNavigation ul:nth-child(2) {
+    border-left: none;    
+  }
+
+  .footerSocialMedia { 
+    margin-left: 0;    
+  }
+
+  .footerSocialMedia p:last-child {
+    margin-left: 12px;
+  }
+
+  .mainSectionOurSesvicesDecoretion:before {
+    display: none;  
+  }
+
+  .mainSectionAboutUsAplications:before {
+   display: none;
+  }
+
+  .mainSectionDonate ul+p:before {
+    display: none; 
+  }
+
+  .mainSectionOurSesvicesFirst:after {
+    display: none; 
+  }
+
+  .mainSectionOurSesvicesSecond:after {
+    display: none;    
+  }
+
+  .mainSectionOurSesvicesThird:after {
+    display: none; 
+  }
+
+  .mainSectionAboutUsAplications:after {
+    display: none;       
+  }
+
+  .mainSectionDonate ul+p:after {
+    display: none;
+  } 
+}
+
+/* 1200px */
+@media (max-width: 1200px) {
+  .wrapper {  
+    width: 1200px;    
+  }
+
+  .header {    
+    grid-template-columns: 250px 3fr 200px;      
+  }
+
+  .headerNavigation {    
+    padding-left: 100px;
+    width: 440px;
+  } 
+
+  .headerEnterandRegistration {    
+    margin-left: -230px;
+  }
+
+  .headerEnterandRegistrationList {
+    left: 951px;        
+  }
+
+  .headerEnterandRegistrationList li:first-child {
+    margin-left: 55px;
+  }
+
+  .headerLanguageList {    
+    width: 250px;
+    padding-right: 0;
+    margin: 0;    
+  }  
+
+  .mainSectionOurSesvices {
+    width: 100%;     
+    padding: 0;    
+    grid-template-columns: repeat(3, 1fr);     
+  }
+
+  .mainSectionOurSesvices article {
+    margin-right: 0;
+  }
+
+  .mainSectionOurSesvicesDecoretion {    
+    left: 850px;
+  }
+
+  .mainSectionAboutUs {
+    background-image: url("../assets/images/computer1200.png");    
+  }
+
+  .mainSectionAboutUsNewspapersSlider {    
+    padding-right: 50px;         
+  }
+
+  .mainSectionAboutUsAplications {
+    margin: 0;
+    width: 440px;
+  }
+
+  .mainSectionAboutUsAplications p {    
+    padding: 0 0 0 340px;
+    margin: 0;
+    box-sizing: content-box;
+  }
+
+  .mainSectionAboutUsAplications h4 {      
+    margin: 0 0 20px 380px;
+    width: 400px;      
+  }
+
+  .mainSectionAboutUsAplications ul {    
+    margin-left: 398px;    
+  }
+
+  .footer {    
+    grid-template-columns: 520px 1fr;
+  }  
+
+  .footerNavigation {    
+    margin: 0 0 0 55px; 
+  }  
+}
+
+/* 768px */
+@media (max-width: 768px) {  
+
+  .wrapper {  
+    width: 100vw;
+    font-size: 10px;    
+  } 
+
+  .headerLogoAndNavigation {
+    width: 100vw;    
+    grid-template-columns: 3fr 5fr 2fr;
+  }
+
+  .headerLogo {   
+    margin: 45px 0 0 0;
+  }
+  
+  .headerNavigation {   
+    padding: 49px 0px 0 0;
+    box-sizing: border-box;
+    width: 250px;
+  }
+
+  .headerNavigationList li {
+    padding-left: 15px;
+  }  
+
+  .headerEnterandRegistration {    
+    margin: 0;    
+    padding-top: 49px;
+    width: 100px;    
+  }
+
+  .headerEnterandRegistration div:nth-child(2) {
+    display: none;
+  }
+
+  div.headerEnterandRegistration ul {
+    display: none;
+  }
+
+  div.headerEnterandRegistrationList768 {       
+    height: 31px;  
+    display: grid;
+    margin: 0;
+    padding: 0;
+    grid-template-columns: repeat(2, 1fr);    
+  }
+
+  div.headerEnterandRegistrationList768 div {
+    margin: 0;
+    padding: 0;      
+  }
+
+  div.headerEnterandRegistrationList768 img {    
+    height: 20px;          
+  }
+
+  div.headerEnterandRegistrationList768 a:hover img {    
+    height: 30px;          
+  }
+
+  div.headerEnterandRegistrationList768 div:nth-child(2) {
+    display: block;
+  }
+
+  div.headerEnterandRegistrationList768 div:last-child {
+    display: none;
+  }
+
+  .headerLanguage {       
+    width: 100vw;
+    margin: 0;
+  }
+
+  .mainSectionRegistration {
+    width: 100vw;    
+  }
+
+  .headerLanguageList {    
+    padding-right: 0;
+    margin: 0;    
+  }    
+
+  .main {
+    width: 100vw;    
+  }
+
+  .mainRegistrationBigSigns h2 {
+    font-size: 40px;
+  }
+
+  .mainRegistrationBigSigns p {
+    font-size: 26px;
+  }
+
+  .mainSectionOurSesvices {
+    width: 100vw;
+    height: 480px;;
+    grid-template-areas: 
+      "first second"
+      "third fourth"; 
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 200px);
+    margin: 0;
+    padding: 0;    
+  }
+
+  .mainSectionOurSesvicesFirst,
+  .mainSectionOurSesvicesSecond,
+  .mainSectionOurSesvicesThird {
+    display: grid;
+    grid-template-areas:
+    "img head"
+    "desc desc";
+    grid-template-rows: 1fr 4fr ;
+    grid-template-columns: 1fr 4fr;    
+    margin: 0;
+    width: 50vw;    
+  }
+
+  .mainSectionOurSesvices article:nth-child(-n+3) h4 {
+    font-size: 26px;        
+  }
+
+  .mainSectionOurSesvices  article:nth-child(-n+3) p {
+    font-size: 12px;
+    line-height: 1.3rem;
+    padding-top: 10px;
+  }
+
+  .mainSectionOurSesvices article {
+    margin-right: 0;
+  }
+
+  .mainSectionOurSesvicesFourth {
+    grid-area: fourth;       
+    display: grid;
+    grid-template-rows: 75px 1fr;
+    margin: 0;
+    padding: 0;
+    text-align: start;    
+    letter-spacing: 0px;     
+  }   
+
+  .mainSectionOurSesvicesFourth h3 {        
+    font-size: 25px;
+    font-weight: 400;    
+    margin: -7px 0 0 50px;
+    padding: 0;   
+  }
+
+  .mainSectionOurSesvicesFourth p {       
+    font-size: 12px;
+    line-height: 1.3rem;
+    margin-left: 15px;
+    margin-top: -20px;
+  } 
+
+  .mainSectionOurSesvicesFourth span {
+    color: #fc444a;
+  }
+
+  .mainSectionOurSesvicesDecoretion {    
+    left: 123px;
+    top: 430px;
+    font-size: 16px;
+    color: #fc444a;
+  }
+
+  .mainSectionAboutUs {
+    background-image: none; 
+    width: 90vw;
+    display: grid;
+    justify-content: center;        
+  }
+  
+  .mainSectionAboutUsNewspapers ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);    
+  }
+
+  .mainSectionAboutUsNewspapers ul li {
+    margin: 0 5px;
+    width: 120px;
+  }
+
+  .mainSectionAboutUsNewspapersSlider {    
+    padding: 50px 0 0 0;    
+  }  
+
+  .mainSectionAboutUsAplications {
+    margin: 0;
+    width: 440px;    
+  }
+
+  .mainSectionAboutUsAplications p {    
+    padding: 0 0 0 45px;
+    margin: 0;
+    text-align: center;
+  }
+
+  .mainSectionAboutUsAplications h4 {      
+    margin: 0 0 20px 35px;
+    width: 400px;      
+  }
+
+  .mainSectionAboutUsAplications ul {    
+    margin-left: 70px;    
+  }
+
+  .mainSectionDonate {
+    width: 100vw;
+    display: grid;    
+  }
+
+  .mainSectionDonate h4 {
+    font-size: 26px;
+    margin: 0px;
+    display: grid;
+    justify-self: center;
+  }
+
+  .mainSectionDonate p {
+    font-size: 16px;
+    padding-left: 0;
+    margin-left: 0;       
+  }
+
+  .mainSectionDonate ul {    
+    padding-left: 0;
+    margin-left: 0;
+    margin: 0 auto;
+  }
+
+  .mainSectionDonate ul+p {    
+    padding-left: 250px;
+    margin-right: 0;    
+    display: grid;
+    justify-self: end;
+    width: 247px;
+    box-sizing: content-box;
+  }
+
+  ul.mainSectionDonateFriends {   
+    width: 100vw;
+    margin-top: 0;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);  
+    margin-left: 0; 
+  }
+
+  ul.mainSectionDonateFriends li {
+    margin: 5px;
+    padding: 5px;
+  }
+
+  .mainSectionDonate ul li{
+    margin: 5px;
+    padding: 5px;
+  }
+
+  .footer {    
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "email" 
+    "navigation"
+    "media";    
+    grid-template-rows: 65px 80px 1fr;    
+    margin: 0;        
+  } 
+
+  .footerEmail {
+    margin: 0;
+    height: 65px;
+    padding: 0; 
+  }
+
+  article.footerEmail ul {
+    width: 100vw;
+    display: grid;    
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);   
+    margin: 0;
+    padding: 0;
+    grid-template-areas: 
+    "a b c"
+    "d d d";  
+  }
+
+  article.footerEmail ul li:nth-child(1) {
+    grid-area: a;
+  }
+
+  article.footerEmail ul li:nth-child(2) {
+    grid-area: b;
+  }
+
+  article.footerEmail ul li:nth-child(3) {
+    grid-area: c;
+  }
+
+  article.footerEmail ul li:nth-child(4) {
+    grid-area: d;    
+  }
+
+  article.footerEmail ul li:nth-child(4) a {
+    margin: 0;
+    padding: 0 0 0 20px;
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  article.footerEmail ul li:nth-child(4) a p:last-child {
+    margin-top: 0;   
+  }
+
+  .footerEmail ul li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .footer ul {
+    font-size: 10px;
+  }
+  
+  .footerNavigation {    
+    width: 80vw;
+    grid-template-columns: 150px 150px 150px;
+    margin-right: 0;
+    justify-self: center; 
+  }
+
+  .footerNavigation ul {
+    display: grid;
+    justify-self: center;
+  }
+  
+  .footerNavigation ul:first-child {
+    margin-right: 0;
+  }
+  
+  .footerNavigation ul:nth-child(2) {    
+    margin-left: 0;
+    
+  }
+
+  .footerNavigation ul h5 {
+    font-size: 12px;
+    height: 70px;
+    margin-left: 0;
+    height: 20px;
+    width: 90px;
+    margin-right: 0;
+  }
+
+  .footerNavigation ul li {
+    font-size: 10px;    
+    margin-left: 0;
+    list-style-type: none;
+    padding-top: 0;
+    width: 90px;    
+  }
+
+  .footerSocialMedia {
+    margin-right: 0px;
+    margin-top: 80px;
+    display: grid; 
+    justify-self: center;   
+  }    
+}
+
+/* 540px */
+@media (max-width: 540px) {  
+
+  .wrapper {  
+    width: 100vw;
+    font-size: 8px;    
+  }
+  
+  .header {
+    width: 100vw;
+  }
+
+  .headerLogoAndNavigation {
+    width: 100vw;    
+    grid-template-columns: 3fr 4fr 3fr;
+  }
+  
+  .headerNavigation {   
+    display: none;
+  }
+
+  .headerEnterandRegistration {  
+    width: 150px;    
+  }  
+
+  div.headerEnterandRegistrationList768 {     
+    grid-template-columns: repeat(3, 1fr);    
+  }  
+
+  div.headerEnterandRegistrationList768 div:last-child {
+    height: 20px; 
+    display: block;
+  }  
+
+  .main {
+    width: 100vw;    
+  }
+
+  .mainRegistration {
+    display: grid;
+    justify-content: center;
+    width: 100vw;
+  }
+
+  .mainRegistration article {
+    width: 100vw;
+  }
+
+  .mainRegistrationBigSigns h2 {
+    font-size: 28px;    
+  }
+
+  .mainRegistrationBigSigns p {
+    font-size: 14x;    
+  }
+
+  .mainRegistrationLinks {
+    width: 100vw;
+  }
+
+  .mainRegistrationLinks a:last-child {    
+    margin-left: 15px;    
+  }
+
+  .mainRegistrationLinks a:last-child img {
+    padding-right: 0;
+  }  
+
+  .mainSectionOurSesvicesFourth {   
+    margin: 40px 0 0 0;        
+  } 
+
+  .mainSectionOurSesvicesFourth span {
+    color: #fc444a;
+  }
+
+  .mainSectionOurSesvicesDecoretion {    
+    left: 61px;   
+  }
+ 
+  .mainSectionAboutUsNewspapers ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 85vw;         
+  } 
+
+  .mainSectionAboutUsNewspapers {
+    width: 90vw;    
+    padding-left: 70px;
+  }
+
+  .mainSectionAboutUsNewspapersSlider {
+    width: 90vw;
+    padding-left: 70px;    
+  }
+
+  .mainSectionAboutUsNewspapersSlider p {    
+    font-size: 10px;
+    margin: 0;
+    width: 80vw;
+  }
+
+  article.mainSectionAboutUsNewspapersSlider:nth-child(2) {
+    font-size: 12px;    
+    margin: 0;   
+    width: 300px;
+  }  
+  
+  .mainSectionAboutUsAplications p {    
+   width: 90vw;
+   font-size: 10px;
+  }
+
+  .mainSectionAboutUsAplications ul {    
+    margin-left: 30px;
+    width: 95vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;    
+  }
+
+  .mainSectionAboutUsAplications ul li {    
+    margin-top: 25px;; 
+  }
+
+  .mainSectionAboutUsAplications h4 {
+    margin-left: 16px;
+  } 
+
+  .mainSectionDonate {
+    width: 100vw;    
+  }
+
+  .mainSectionDonate h4 {
+    font-size: 20px;
+    margin: 0px;
+    display: grid;
+    justify-self: center;
+  }
+
+  .mainSectionDonate p {
+    font-size: 16px;
+    padding-left: 0;
+    margin-left: 0;
+    margin: 0 auto;
+  }
+
+  .mainSectionDonate ul {    
+    padding-left: 0;
+    margin-left: 0;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .mainSectionDonate ul li {
+    padding: 0;
+  }
+
+  .mainSectionDonate ul+p {   
+    padding: 0;
+    justify-self: center;
+  }  
+
+  ul.mainSectionDonateFriends {   
+    width: 100vw;
+    margin-top: 0;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);  
+    margin-left: 0; 
+  }
+
+  ul.mainSectionDonateFriends li {
+    margin: 5px;
+    padding: 5px;
+  }
+
+  .mainSectionDonate ul li{
+    margin: 5px;
+    padding: 5px;
+  }
+
+  .footer {    
+    margin: 220px 0 0 0;    
+  } 
+
+  .footerEmail {
+    width: 90vw;
+  }
+
+  article.footerEmail ul {     
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);    
+    grid-template-areas: 
+    "a b"
+    "c d";  
+  }   
+
+  article.footerEmail ul li:nth-child(4) a p:first-child {
+    display: none; 
+  }
+
+  article.footerEmail ul li:nth-child(4) a p:last-child {   
+    margin-left: 30px;   
+  }
+
+  .footerEmail ul li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .footer ul {
+    font-size: 10px;
+  }
+  
+  .footerNavigation {    
+    grid-template-columns: 30% 46% 24%;    
+    height: 160px;
+    margin-left: 0; 
+  }
+
+  .footerNavigation ul h5 {
+    font-size: 12px;
+    height: 70px;
+    margin-left: 0;
+    height: 20px;
+    width: 90px;
+    margin-right: 0;
+  }
+
+  .footerNavigation ul li {
+    font-size: 10px;    
+    margin-left: 0;
+    list-style-type: none;
+    padding-top: 0;
+    width: 90px;    
+  }
+
+  .footerSocialMedia {
+    margin-right: 0px;
+    margin-top: 80px;
+  } 
+}
+
+/* 420px */
+@media (max-width: 420px) {
+
+  .wrapper {
+    width: 100vw;
+    max-height: 2000px;
+  }
+
+  .headerLogo {
+    margin-top: 10px;    
+  }  
+  
+  .headerLogoAndNavigation {
+    width: 100vw;    
+    grid-template-areas:
+    "headerLogo"
+    "headerEnterandRegistration";
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    margin: 0;
+  } 
+
+  .headerEnterandRegistration {  
+    padding-top: 0;   
+  }  
+  
+  .headerLanguageList {    
+    width: 100vw;
+    height: 10px;
+    font-size: 10px;
+    justify-items: center;  
+  }
+
+  .headerLanguage ul li:first-child {
+    margin-right: 11px;
+  }
+
+  .main {
+    width: 100vw;
+    max-height: 1500px;
+  }
+
+  .mainRegistration {
+    display: grid;
+    justify-content: center;
+    width: 100vw;
+  }
+
+  .mainRegistration article {
+    width: 100vw;
+  }
+
+  .mainRegistrationBigSigns h2 {
+    font-size: 16px;
+    margin-top: 0;
+    height: 40px;;    
+  }
+
+  .mainRegistrationHeadlineDescription {
+    font-size: 16x;
+    padding-top: 0;    
+  } 
+
+  .mainRegistrationLinks {
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 95%;
+    grid-template-rows: repeat(3, 1fr);
+    padding-top: 0;
+  }
+
+  .mainRegistrationLinks a:nth-child(1) img {
+    width: 189px;
+  }
+
+  .mainRegistrationLinks a:nth-child(1) p {
+    margin-top: -50px;
+    margin-left: 37px;
+  }
+
+  .mainRegistrationLinks a:last-child {    
+    margin-left: 15px;    
+  }
+
+  .mainRegistrationLinks a:last-child img {
+    padding-right: 0;
+  }
+
+  .mainRegistrationLinks a:nth-child(3) {
+    margin: 0 auto;
+    padding: 0;
+  }
+  
+  .mainSectionOurSesvices {
+    width: 100vw;
+    height: 480px;
+    grid-template-areas: 
+      "first"
+      "second"
+      "third"
+      "fourth"; 
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 200px);
+    margin: 0;
+    padding: 0;  
+  }
+
+  .mainSectionOurSesvicesFirst,
+  .mainSectionOurSesvicesSecond,
+  .mainSectionOurSesvicesThird {    
+    width: 95vw;    
+  }
+
+  .mainSectionOurSesvicesFourth {   
+    margin: 0;        
+  } 
+
+  .mainSectionOurSesvicesFourth span {
+    color: #fc444a;
+  }
+
+  .mainSectionOurSesvicesDecoretion {    
+    top: 783px;
+    left: 5px;
+    width: 205px;
+    padding-left: 0px;
+    right: 0px;
+    margin: 0 auto;
+    font-size: 12px;  
+  } 
+  
+  .mainSectionAboutUs {
+    max-height: 200px;
+  }
+
+  .mainSectionAboutUsNewspapers {
+    display: none;
+  }
+ 
+  .mainSectionAboutUsNewspapers ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 85vw;         
+  } 
+
+  .mainSectionAboutUsNewspapers {
+    width: 90vw;    
+    padding-left: 70px;    
+  }
+
+  .mainSectionAboutUsNewspapersSlider {
+    width: 90vw;       
+    padding-top: 100px;
+    padding-left: 20px;    
+  }
+
+  .mainSectionAboutUsNewspapersSlider p {    
+    font-size: 10px;
+    margin: 0;
+    width: 80vw;    
+  }
+
+  article.mainSectionAboutUsNewspapersSlider:nth-child(2) {
+    font-size: 12px;    
+    margin: 0;   
+    width: 300px;
+  } 
+  
+  .mainSectionAboutUsNewspapersSlider p:last-child {    
+    padding-top: 0px;   
+  }
+
+  .mainSectionAboutUsAplications {    
+    display: none;
+  }    
+  
+  .mainSectionDonate {    
+    display: none;  
+  }
+
+  .footer {    
+    margin: -900px 0 0 0; 
+    grid-template-areas:
+    "email"
+    "media";
+    grid-template-columns: 95vw;
+    max-height: 90px;
+    padding-top: 15px;
+  } 
+
+  article.footerEmail ul {
+    width: 95vw;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr); 
+    grid-template-areas: 
+    "a"
+    "b"
+    "c"
+    "d";    
+  } 
+
+  article.footerEmail ul li:nth-child(4) a {
+    grid-template-columns: 1fr;
+    justify-self: center;
+  }    
+
+  .footerEmail ul li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .footer ul {
+    font-size: 10px;
+  }
+  
+  .footerNavigation {     
+    display: none;
+  }
+ 
+  .footerSocialMedia {
+    margin-right: 0px;
+    margin-top: 45px;
+    font-size: 8px;
+    width: 90vw;
+  } 
+
+  .footerSocialMedia ul {
+    display: none;
+  }
+ 
+}
